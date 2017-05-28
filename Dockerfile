@@ -1,2 +1,2 @@
 FROM eclipse/ubuntu_android 
-expose 19000
+expose 19000 19001
