@@ -5,7 +5,12 @@ var http = require('http'),
 //
 //httpProxy.createProxyServer({target:'http://10.0.157.2:19000'}).listen(4401); // See (†)
 
+#${server.port.19000}
+#${server.port.19001}
+#${server.port.19002}
 
+#${server.port.4403}
+#http://${server.port.6080}
 
 
  a = {
