@@ -1,0 +1,42 @@
+var http = require('http'),
+  //  httpProxy = require('http-proxy');
+//
+// Create your proxy server and set the target in the options.
+//
+//httpProxy.createProxyServer({target:'http://10.0.157.2:19000'}).listen(4401); // See (†)
+
+
+
+
+ a = {
+sdkVersion: "17.0.0",
+name: "testapp",
+slug: "testapp",
+version: "0.1.0",
+xde: true,
+developer: {
+tool: "crna"
+},
+packagerOpts: {
+hostType: "tunnel",
+lanType: "ip",
+dev: true,
+strict: false,
+minify: false,
+urlType: "exp",
+urlRandomness: null
+},
+env: { },
+bundleUrl: "http://node27.codenvy.io:43127/./node_modules/react-native-scripts/build/bin/crna-entry.bundle?platform=ios&dev=true&strict=false&minify=false&hot=false&assetPlugin=expo/tools/hashAssetFiles",
+debuggerHost: "node27.codenvy.io:43127",
+mainModuleName: "./node_modules/react-native-scripts/build/bin/crna-entry",
+logUrl: "http://node27.codenvy.io:43128/logs",
+id: "@anonymous/testapp-73b9d9f1-a34a-41b4-bff9-c6641bb7b024"
+};
+
+console.log(a);
+http.createServer(function (req, res) {
+  res.writeHead(200, { 'Content-Type': 'text/json' });
+  res.write(JSON.stringify(a));
+  res.end();
+}).listen(4403); 
